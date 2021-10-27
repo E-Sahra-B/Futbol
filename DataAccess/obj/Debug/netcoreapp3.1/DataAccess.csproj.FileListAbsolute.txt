@@ -1,0 +1,16 @@
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.deps.json
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\DataAccess.pdb
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\bende\source\repos\Bismillah\DataAccess\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.AssemblyReference.cache
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.AssemblyInfo.cs
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.csproj.CopyComplete
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\Users\bende\source\repos\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb
+C:\MyProjects\VisualStudio\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.dll
+C:\MyProjects\VisualStudio\Bismillah\DataAccess\obj\Debug\netcoreapp3.1\DataAccess.pdb

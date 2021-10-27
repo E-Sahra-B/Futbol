@@ -1,0 +1,61 @@
+﻿@using Entities.Concrete
+@model List<Match>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+<div class="container">
+    <form class="forms-sample" style="padding: 50px; background-color: black; " method="post">
+        <div class="form-group row">
+
+
+
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId1" placeholder="TeamId1">
+            </div>
+
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="Result1" placeholder="Result1">
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="exampleInputUsername2" style="font-weight:bold; text-align:center;" value="/" />
+            </div>
+            <div class="col-sm-1">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="Result2" placeholder="Result2">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId2" placeholder="TeamId2">
+            </div>
+
+
+        </div>
+        <button type="submit" class="btn btn-outline-success">Maç Ekle</button>
+    </form>
+    <table class="table table-bordered">
+        <tr>
+            <th>Maç Id</th>
+            <th>Ev Sahibi Takım</th>
+            <th>Sonuç</th>
+            <th>Sonuç</th>
+            <th>Deplasman Takım</th>
+
+            <th>Detaylar</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@item.MatchId</td><!--Match/INDEX-->
+        <td>@item.TeamId1</td>
+        <td>@item.Result1</td>
+        <td>@item.Result2</td>
+        <td>@item.TeamId2</td>
+
+        <td><a href="#" class="btn btn-warning">Detaylar</a></td>
+        <td><a href="#" class="btn btn-danger">Sil</a></td>
+    </tr>
+        }
+    </table>
+</div>
+

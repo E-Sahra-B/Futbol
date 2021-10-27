@@ -1,0 +1,40 @@
+﻿@using Entities.Concrete
+@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="container">
+    <form class="forms-sample" style="padding: 50px; background-color: black; " method="post">
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="LeagueId" placeholder="LeagueId">
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-12">
+                <input type="text" class="form-control" id="exampleInputUsername2" name="TeamName" placeholder="TeamName">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Takım Ekle</button>
+    </form>
+    <table class="table table-bordered">
+        <tr>
+            <th>Lig Id</th>
+            <th>Takım Id</th>
+            <th>Takım Adı</th>
+            <th>Detaylar</th>
+            <th>Sil</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.LeagueId</td><!--TEAM/INDEX-->
+                <td>@item.TeamId</td>
+                <td>@item.TeamName</td>
+                <td><a href="#" class="btn btn-warning">Detaylar</a></td>
+                <td><a href="#" class="btn btn-danger">Sil</a></td>
+            </tr>
+        }
+    </table>
+</div>
