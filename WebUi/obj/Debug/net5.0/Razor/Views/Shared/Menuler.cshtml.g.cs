@@ -26,8 +26,15 @@ using WebUi.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\MyProjects\VisualStudio\Bismillah\WebUi\Views\_ViewImports.cshtml"
+using Entities.Concrete;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"dfb840103a4e1a374200b8afb9a8385cbf6ecf7f", @"/Views/Shared/Menuler.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9cc37074dda95a63c32d47e5fe595668312d347e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1951570255c5d2000fe6ba94a0f2b801fe8c0c8c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Menuler : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("action", new global::Microsoft.AspNetCore.Html.HtmlString("#"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -97,7 +104,7 @@ using WebUi.Models;
 
             </ul>
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dfb840103a4e1a374200b8afb9a8385cbf6ecf7f5812", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "dfb840103a4e1a374200b8afb9a8385cbf6ecf7f5987", async() => {
                 WriteLiteral("\r\n                <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Aranacak Kelime\" name=\"Search\"");
                 BeginWriteAttribute("required", " required=\"", 1703, "\"", 1714, 0);
                 EndWriteAttribute();

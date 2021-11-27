@@ -1,23 +1,17 @@
 ﻿using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebUi.Controllers
 {
     public class ContactController : Controller
     {
-        //private IContactService _contactService;
-        //public ContactController(IContactService contactService)
-        //{
-        //    _contactService = contactService;
-        //}
-        ContactManager cm = new ContactManager(new EfContactDal());
+        private readonly IContactService _contactService;
+        public ContactController(IContactService contactService)
+        {
+            _contactService = contactService;
+        }
         public IActionResult Index()
         {
             return View();
@@ -27,7 +21,7 @@ namespace WebUi.Controllers
         {
             p.ContactDate = DateTime.Parse(DateTime.Now.ToShortDateString());
             p.ContactStatus = true;
-            cm.Add(p);
+            _contactService.Add(p);
 
             return RedirectToAction("Index", "Team");
         }

@@ -1,26 +1,19 @@
 ﻿using Business.Abstract;
-using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebUi.Controllers
 {
     public class AboutController : Controller
     {
-        //private IAboutService _aboutService;
+        private readonly IAboutService _aboutservice;
 
-        //public AboutController(IAboutService aboutService)
-        //{
-        //    _aboutService = aboutService;
-        //}
-        AboutManager abm = new AboutManager(new EfAboutDal());
+        public AboutController(IAboutService aboutservice)
+        {
+            _aboutservice = aboutservice;
+        }
         public IActionResult Index()
         {
-            var model = abm.GetAll();
+            var model = _aboutservice.GetAll();
             return View(model);
         }
     }

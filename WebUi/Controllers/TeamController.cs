@@ -1,26 +1,26 @@
-﻿using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
+﻿using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace WebUi.Controllers
 {
     public class TeamController : Controller
     {
-        TeamManager tm = new TeamManager(new EfTeamDal());
+        private readonly ITeamService _teamService;
+
+        public TeamController(ITeamService teamService)
+        {
+            _teamService = teamService;
+        }
         public IActionResult Index()
         {
-            var model = tm.GetAll();
+            var model = _teamService.GetAll();
             return View(model);
         }
         [HttpPost]
         public IActionResult Index(Team t)
         {
-           tm.Add(t);
+           _teamService.Add(t);
             return RedirectToAction("Index","Team");
         }
     }

@@ -1,5 +1,4 @@
-﻿using Business.Concrete;
-using DataAccess.Concrete.EntityFramework;
+﻿using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,16 +6,20 @@ namespace WebUi.Controllers
 {
     public class MatchController : Controller
     {
-        MatchManager mm = new MatchManager(new EfMatchDal());
+        private readonly IMatchService _matchService;
+        public MatchController(IMatchService matchService)
+        {
+            _matchService = matchService;
+        }
         public IActionResult Index()
         {
-            var model = mm.GetAll();
+            var model = _matchService.GetAll();
             return View(model);
         }
         [HttpPost]
         public IActionResult Index(Match m)
         {
-            mm.Add(m);
+            _matchService.Add(m);
             return RedirectToAction("Index", "Match");
         }
     }

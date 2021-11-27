@@ -26,8 +26,15 @@ using WebUi.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\MyProjects\VisualStudio\Bismillah\WebUi\Views\_ViewImports.cshtml"
+using Entities.Concrete;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"81abbf82de0e2940e99227f1b7ae0a7e91bd7547", @"/Views/Shared/Footer.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9cc37074dda95a63c32d47e5fe595668312d347e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1951570255c5d2000fe6ba94a0f2b801fe8c0c8c", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Footer : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

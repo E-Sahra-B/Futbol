@@ -10,7 +10,7 @@ namespace WebUi.Controllers
 {
     public class LoginController : Controller
     {
-        private IAuthService _authService;
+        private readonly IAuthService _authService;
 
         public LoginController(IAuthService authService)
         {

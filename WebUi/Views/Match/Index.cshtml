@@ -1,16 +1,11 @@
-﻿@using Entities.Concrete
-@model List<Match>
+﻿@model List<Match>
 @{
     ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_UserLayout.cshtml";
 }
 
 <div class="container">
     <form class="forms-sample" style="padding: 50px; background-color: black; " method="post">
         <div class="form-group row">
-
-
-
             <div class="col-sm-4">
                 <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId1" placeholder="TeamId1">
             </div>
@@ -27,8 +22,6 @@
             <div class="col-sm-4">
                 <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId2" placeholder="TeamId2">
             </div>
-
-
         </div>
         <button type="submit" class="btn btn-outline-success">Maç Ekle</button>
     </form>
@@ -39,14 +32,13 @@
             <th>Sonuç</th>
             <th>Sonuç</th>
             <th>Deplasman Takım</th>
-
             <th>Detaylar</th>
             <th>Sil</th>
         </tr>
         @foreach (var item in Model)
         {
     <tr>
-        <td>@item.MatchId</td><!--Match/INDEX-->
+        <td>@item.MatchId</td>
         <td>@item.TeamId1</td>
         <td>@item.Result1</td>
         <td>@item.Result2</td>
