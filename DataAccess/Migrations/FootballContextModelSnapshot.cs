@@ -134,24 +134,23 @@ namespace DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Result1")
+                    b.Property<int>("GuestResult")
                         .HasColumnType("int");
 
-                    b.Property<int>("Result2")
+                    b.Property<int?>("GuestTeamID")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeamId1")
+                    b.Property<int>("HomeResult")
                         .HasColumnType("int");
 
-                    b.Property<int>("TeamId2")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("TeamsTeamId")
+                    b.Property<int?>("HomeTeamID")
                         .HasColumnType("int");
 
                     b.HasKey("MatchId");
 
-                    b.HasIndex("TeamsTeamId");
+                    b.HasIndex("GuestTeamID");
+
+                    b.HasIndex("HomeTeamID");
 
                     b.ToTable("Matches");
                 });
@@ -199,11 +198,17 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Entities.Concrete.Match", b =>
                 {
-                    b.HasOne("Entities.Concrete.Team", "Teams")
-                        .WithMany("Matches")
-                        .HasForeignKey("TeamsTeamId");
+                    b.HasOne("Entities.Concrete.Team", "GuestTeams")
+                        .WithMany("AwayMatches")
+                        .HasForeignKey("GuestTeamID");
 
-                    b.Navigation("Teams");
+                    b.HasOne("Entities.Concrete.Team", "HomeTeams")
+                        .WithMany("HomeMatches")
+                        .HasForeignKey("HomeTeamID");
+
+                    b.Navigation("GuestTeams");
+
+                    b.Navigation("HomeTeams");
                 });
 
             modelBuilder.Entity("Entities.Concrete.Team", b =>
@@ -224,7 +229,9 @@ namespace DataAccess.Migrations
 
             modelBuilder.Entity("Entities.Concrete.Team", b =>
                 {
-                    b.Navigation("Matches");
+                    b.Navigation("AwayMatches");
+
+                    b.Navigation("HomeMatches");
                 });
 #pragma warning restore 612, 618
         }

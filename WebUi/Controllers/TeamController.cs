@@ -20,8 +20,16 @@ namespace WebUi.Controllers
         [HttpPost]
         public IActionResult Index(Team t)
         {
-           _teamService.Add(t);
-            return RedirectToAction("Index","Team");
+            _teamService.Add(t);
+            TempData["mesaj"] = "eklendi";
+            return RedirectToAction("Index", "Team");
+        }
+        public IActionResult Delete(int id)
+        {
+            var value = _teamService.GetById(id);
+            _teamService.Delete(value);
+            TempData["mesaj"] = "silindi";
+            return RedirectToAction("Index", "Team");
         }
     }
 }

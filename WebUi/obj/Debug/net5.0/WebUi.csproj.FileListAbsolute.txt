@@ -170,3 +170,13 @@ C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\WebUi.dll
 C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\ref\WebUi.dll
 C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\WebUi.pdb
 C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\WebUi.genruntimeconfig.cache
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Shared\_AdminLayout.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Admin\AdminNavbarPartial.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Admin\Index.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Team\Add.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Player\Add.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\League\Add.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\Match\Add.cshtml.g.cs
+C:\MyProjects\VisualStudio\Bismillah\WebUi\obj\Debug\net5.0\Razor\Areas\Admin\Views\About\Update.cshtml.g.cs

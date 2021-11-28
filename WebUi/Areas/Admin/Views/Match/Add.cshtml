@@ -1,0 +1,27 @@
+﻿@model WebUi.Areas.Admin.Models.MatchAddViewModel
+
+
+<h1>Yeni Maç Ekleme</h1>
+<br />
+@using (Html.BeginForm("Add", "Match", "Admin", FormMethod.Post))
+{
+    <label asp-for="Match.HomeTeamID"></label>
+    <select asp-for="Match.HomeTeamID" class="form-control" asp-items="@(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+    <span asp-validation-for="Match.HomeTeamID"></span>
+    <br />
+    <label>EvSahibi Sonuç</label>
+    <input type="text" asp-for="Match.HomeResult" class="form-control" />
+    <br />
+
+
+
+    <label asp-for="Match.GuestTeamID"></label>
+    <select asp-for="Match.GuestTeamID" class="form-control" asp-items="@(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+    <span asp-validation-for="Match.GuestTeamID"></span>
+    <br />
+    <label>Konuk takım sonuç</label>
+    <input type="text" asp-for="Match.GuestResult" class="form-control" />
+    <br />
+
+    <button class="btn btn-primary">Maç Ekle</button>
+}

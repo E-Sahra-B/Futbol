@@ -16,27 +16,35 @@ namespace Business.Concrete
             _matchDal = matchDal;
         }
         //[SecuredOperation("admin,moderator")]
-        public void Add(Match match)
+        public IResult Add(Match match)
         {
             _matchDal.Add(match);
+            return new SuccessResult(Messages.MatchAdded);
+
         }
-        //public IResult Delete(Match match)
-        //{
-        //    _matchDal.Delete(match);
-        //    return new SuccessResult(Messages.MatchDeleted);
-        //}
+        public IResult Delete(Match match)
+        {
+            _matchDal.Delete(match);
+            return new SuccessResult(Messages.MatchDeleted);
+        }
         public List<Match> GetAll()
         {
             return _matchDal.GetAll();
         }
-        //public IDataResult<Match> GetById(int matchId)
-        //{
-        //    return new SuccessDataResult<Match>(_matchDal.Get(m => m.MatchId == matchId));
-        //}
-        //public IResult Update(Match match)
-        //{
-        //    _matchDal.Update(match);
-        //    return new SuccessResult(Messages.MatchUpdated);
-        //}
+        public Match GetById(int matchId)
+        {
+            return _matchDal.Get(t => t.MatchId == matchId);
+        }
+
+        public List<Match> GetMatchListWithTeam()
+        {
+            return _matchDal.Get();
+        }
+
+        public IResult Update(Match match)
+        {
+            _matchDal.Update(match);
+            return new SuccessResult(Messages.MatchUpdated);
+        }
     }
 }

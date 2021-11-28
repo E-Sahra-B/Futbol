@@ -20,23 +20,23 @@ namespace Business.Concrete
         {
             _playerDal.Add(player);
         }
-        //public IResult Delete(Player player)
-        //{
-        //    _playerDal.Delete(player);
-        //    return new SuccessResult(Messages.PlayerDeleted);
-        //}
+        public void Delete(Player player)
+        {
+            _playerDal.Delete(player);
+            //return new SuccessResult(Messages.PlayerDeleted);
+        }
         public List<Player> GetAll()
         {
            return _playerDal.GetAll();
         }
-        //public IDataResult<Player> GetById(int playerId)
-        //{
-        //    return new SuccessDataResult<Player>(_playerDal.Get(p => p.PlayerId == playerId));
-        //}
-        //public IResult Update(Player player)
-        //{
-        //    _playerDal.Update(player);
-        //    return new SuccessResult(Messages.PlayerUpdated);
-        //}
+        public Player GetById(int playerId)
+        {
+            return _playerDal.Get(p => p.PlayerId == playerId);
+        }
+        public IResult Update(Player player)
+        {
+            _playerDal.Update(player);
+            return new SuccessResult(Messages.PlayerUpdated);
+        }
     }
 }

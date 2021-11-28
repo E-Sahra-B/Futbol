@@ -21,6 +21,7 @@
         </div>
         <button type="submit" class="btn btn-outline-success" >Futbolcu Ekle</button>
     </form>
+    
     <table class="table table-bordered">
         <tr>
             <th>Fulbolcu Id</th>
@@ -38,7 +39,7 @@
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td><a href="#" class="btn btn-warning">Detaylar</a></td>
-                <td><a href="#" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Player/Delete/@item.PlayerId" class="btn btn-danger">Sil</a></td>
 
             </tr>
         }

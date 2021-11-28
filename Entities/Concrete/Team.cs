@@ -11,6 +11,7 @@ namespace Entities.Concrete
         public string TeamName { get; set; }
         public int LeagueId { get; set; }
         public League Leagues { get; set; }
-        public List<Match> Matches { get; set; }
+        public virtual ICollection<Match> HomeMatches { get; set; }
+        public virtual ICollection<Match> AwayMatches { get; set; }
     }
 }

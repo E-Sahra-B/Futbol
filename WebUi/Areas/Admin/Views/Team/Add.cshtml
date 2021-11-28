@@ -1,0 +1,14 @@
+﻿@model Team
+
+<h1>Yeni Takım Ekleme</h1>
+<br />
+@using (Html.BeginForm("Add", "Team", "Admin", FormMethod.Post))
+{
+    <label>Lig Id</label>
+    <input type="text" asp-for="LeagueId" class="form-control" />
+    <br />
+    <label>Takım Adı</label>
+    <input type="text" asp-for="TeamName" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Takımı Ekle</button>
+}

@@ -1,0 +1,12 @@
+﻿@model League
+
+<h1>Yeni Lig Ekleme</h1>
+<br />
+@using (Html.BeginForm("Add", "League", "Admin", FormMethod.Post))
+{
+    
+    <label>Lig Adı</label>
+    <input type="text" asp-for="LeagueName" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Lig Ekle</button>
+}

@@ -1,30 +1,11 @@
-﻿@model List<Match>
+﻿@*@model List<Match>*@
+@using WebUi.Areas.Admin.Models
+@model MatchListViewModel
+
 @{
     ViewData["Title"] = "Index";
 }
-
 <div class="container">
-    <form class="forms-sample" style="padding: 50px; background-color: black; " method="post">
-        <div class="form-group row">
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId1" placeholder="TeamId1">
-            </div>
-
-            <div class="col-sm-1">
-                <input type="text" class="form-control" id="exampleInputUsername2" name="Result1" placeholder="Result1">
-            </div>
-            <div class="col-sm-1">
-                <input type="text" class="form-control" id="exampleInputUsername2" style="font-weight:bold; text-align:center;" value="/" />
-            </div>
-            <div class="col-sm-1">
-                <input type="text" class="form-control" id="exampleInputUsername2" name="Result2" placeholder="Result2">
-            </div>
-            <div class="col-sm-4">
-                <input type="text" class="form-control" id="exampleInputUsername2" name="TeamId2" placeholder="TeamId2">
-            </div>
-        </div>
-        <button type="submit" class="btn btn-outline-success">Maç Ekle</button>
-    </form>
     <table class="table table-bordered">
         <tr>
             <th>Maç Id</th>
@@ -35,19 +16,51 @@
             <th>Detaylar</th>
             <th>Sil</th>
         </tr>
-        @foreach (var item in Model)
+        @foreach (var item in Model.Maclar)
         {
     <tr>
         <td>@item.MatchId</td>
-        <td>@item.TeamId1</td>
-        <td>@item.Result1</td>
-        <td>@item.Result2</td>
-        <td>@item.TeamId2</td>
 
+        @*<td>@item.HomeTeams.TeamName</td>*@
+        <td>@(new SelectList(Model.Maclar, "HomeTeamID", "TeamName"))</td>
+        @*<td><input type="text" asp-for="Match.HomeTeamID" asp-format="@(new SelectList(Model.Teams,"TeamId","TeamName"))" /></td>*@
+        <td>@item.HomeResult</td>
+
+        <td>@item.GuestResult</td>
+        @*<td>@item.GuestTeams.TeamName</td>*@
+        <td>@(new SelectList(Model.Maclar, "GuestTeamID", "TeamName"))</td>
+        @*@Html.DropDownListFor(x => x.GuestTeamID, (List<SelectListItem>)ViewBag.homeTeam, new { @class = "form-control" })
+        <select asp-for="Match.HomeTeamID" class="form-control" asp-items="@(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+        <select asp-for="Product.CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories,"CategoryId","CategoryName"))"></select>*@
         <td><a href="#" class="btn btn-warning">Detaylar</a></td>
-        <td><a href="#" class="btn btn-danger">Sil</a></td>
+        <td><a href="/Match/Delete/@item.MatchId" class="btn btn-danger">Sil</a></td>
     </tr>
         }
     </table>
 </div>
 
+<!--<form class="forms-sample" style="padding: 50px; background-color: black; " method="post">
+     <div class="form-group row">
+         <div class="col-sm-4">-->
+@*<input type="text" class="form-control" id="exampleInputUsername2" name="TeamId1" placeholder="TeamId1">*@
+<!--<select asp-for="Match.HomeTeamID" class="form-control" asp-items="(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+
+</div>
+
+<div class="col-sm-1">
+    <input type="text" class="form-control" id="exampleInputUsername2" name="Result1" placeholder="Result1">
+</div>
+<div class="col-sm-1">
+    <input type="text" class="form-control" id="exampleInputUsername2" style="font-weight:bold; text-align:center;" value="/" />
+</div>
+<div class="col-sm-1">
+    <input type="text" class="form-control" id="exampleInputUsername2" name="Result2" placeholder="Result2">
+</div>
+<div class="col-sm-4">-->
+@*<input type="text" class="form-control" id="exampleInputUsername2" name="TeamId2" placeholder="TeamId2">*@
+<!--<select asp-for="Match.GuestTeamID" class="form-control" asp-items="(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+
+        </div>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Maç Ekle</button>
+</form>-->

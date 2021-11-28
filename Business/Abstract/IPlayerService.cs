@@ -7,9 +7,9 @@ namespace Business.Abstract
     public interface IPlayerService
     {
         List<Player> GetAll();
-        //IDataResult<Player> GetById(int playerId);
+        Player GetById(int playerId);
         void Add(Player player);
-        //IResult Update(Player player);
-        //IResult Delete(Player player);
+        IResult Update(Player player);
+        void Delete(Player player);
     }
 }

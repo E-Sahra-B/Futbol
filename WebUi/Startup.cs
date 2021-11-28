@@ -78,9 +78,9 @@ namespace WebUi
                                  pattern: "{controller=Team}/{action=Index}/{id?}");
 
                 endpoints.MapAreaControllerRoute(
-                 name: "areas",
-                 areaName: "areas",
-                 pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
+                name: "admin",
+                areaName: "admin",
+                pattern: "{area:exists}/{controller=Admin}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

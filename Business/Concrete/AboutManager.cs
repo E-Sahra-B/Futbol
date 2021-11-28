@@ -23,5 +23,10 @@ namespace Business.Concrete
         {
             return _aboutDal.GetAll();
         }
+
+        public void Update(About about)
+        {
+           _aboutDal.Update(about);
+        }
     }
 }
