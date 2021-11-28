@@ -1,7 +1,5 @@
-# Futbol_bismillah
-*.csharp linguist-detectable=true
-*.java linguist-detectable=false
-*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.xml linguist-detectable=false
-*.css linguist-detectable=false
+N tier katmanlı Dinamik aspnetCore5 web sitesi
+code first kullanımı
+Token alt yapısı
+
+
