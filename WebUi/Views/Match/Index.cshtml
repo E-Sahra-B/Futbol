@@ -18,23 +18,23 @@
         </tr>
         @foreach (var item in Model.Maclar)
         {
-    <tr>
-        <td>@item.MatchId</td>
+            <tr>
+                <td>@item.MatchId</td>
 
-        @*<td>@item.HomeTeams.TeamName</td>*@
-        <td>@(new SelectList(Model.Maclar, "HomeTeamID", "TeamName"))</td>
-        @*<td><input type="text" asp-for="Match.HomeTeamID" asp-format="@(new SelectList(Model.Teams,"TeamId","TeamName"))" /></td>*@
-        <td>@item.HomeResult</td>
+                @*<td>@item.HomeTeams.TeamName</td>*@
+                <td>@(new SelectList(Model.Maclar, "HomeTeamID", "TeamName"))</td>
+                @*<td><input type="text" asp-for="Match.HomeTeamID" asp-format="@(new SelectList(Model.Teams,"TeamId","TeamName"))" /></td>*@
+                <td>@item.HomeResult</td>
 
-        <td>@item.GuestResult</td>
-        @*<td>@item.GuestTeams.TeamName</td>*@
-        <td>@(new SelectList(Model.Maclar, "GuestTeamID", "TeamName"))</td>
-        @*@Html.DropDownListFor(x => x.GuestTeamID, (List<SelectListItem>)ViewBag.homeTeam, new { @class = "form-control" })
-        <select asp-for="Match.HomeTeamID" class="form-control" asp-items="@(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
-        <select asp-for="Product.CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories,"CategoryId","CategoryName"))"></select>*@
-        <td><a href="#" class="btn btn-warning">Detaylar</a></td>
-        <td><a href="/Match/Delete/@item.MatchId" class="btn btn-danger">Sil</a></td>
-    </tr>
+                <td>@item.GuestResult</td>
+                @*<td>@item.GuestTeams.TeamName</td>*@
+                <td>@(new SelectList(Model.Maclar, "GuestTeamID", "TeamName"))</td>
+                @*@Html.DropDownListFor(x => x.GuestTeamID, (List<SelectListItem>)ViewBag.homeTeam, new { @class = "form-control" })
+                    <select asp-for="Match.HomeTeamID" class="form-control" asp-items="@(new SelectList(Model.Teams,"TeamId","TeamName"))"></select>
+                    <select asp-for="Product.CategoryId" class="form-control" asp-items="@(new SelectList(Model.Categories,"CategoryId","CategoryName"))"></select>*@
+                <td><a href="#" class="btn btn-warning">Detaylar</a></td>
+                <td><a href="/Match/Delete/@item.MatchId" class="btn btn-danger">Sil</a></td>
+            </tr>
         }
     </table>
 </div>
@@ -64,3 +64,4 @@
     </div>
     <button type="submit" class="btn btn-outline-success">Maç Ekle</button>
 </form>-->
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

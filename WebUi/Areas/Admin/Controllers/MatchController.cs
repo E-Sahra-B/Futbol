@@ -2,6 +2,7 @@
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using WebUi.Areas.Admin.Models;
+using X.PagedList;
 
 namespace WebUi.Areas.Admin.Controllers
 {
@@ -15,9 +16,10 @@ namespace WebUi.Areas.Admin.Controllers
             _teamService = teamService;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            return View();
+            var model = _matchService.GetAll().ToPagedList(page, 5);
+            return View(model);
         }
         [HttpGet]
         public IActionResult Add()

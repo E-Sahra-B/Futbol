@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mVT7RYgL3oYbpxHVMb/A5mu81vBRn2SvXmmvRLQ99BWoy76phx51flFGGU8hqbdP0qAdYkW0ZXs5OfVpdERtgA==",
+  "dgSpecHash": "Fh7T9fQR+1oaKQqKp9/Mv4VCwRUzoGtqAqPKPvpwlyy0bQ9hQklU3ZoKVts4dJBMSrOfjQVHG7t8qpbx8erRoQ==",
   "success": true,
   "projectFilePath": "C:\\MyProjects\\VisualStudio\\Bismillah\\WebUi\\WebUi.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\bende\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\fluentvalidation\\10.3.0\\fluentvalidation.10.3.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\bende\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.16\\microsoft.aspnetcore.authentication.jwtbearer.3.1.16.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\microsoft.aspnetcore.http\\2.2.2\\microsoft.aspnetcore.http.2.2.2.nupkg.sha512",
@@ -176,7 +177,9 @@
     "C:\\Users\\bende\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\bende\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\bende\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\bende\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\bende\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512",
+    "C:\\Users\\bende\\.nuget\\packages\\x.pagedlist.mvc.core\\8.1.0\\x.pagedlist.mvc.core.8.1.0.nupkg.sha512"
   ],
   "logs": []
 }

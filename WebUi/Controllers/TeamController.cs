@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using X.PagedList;
 
 namespace WebUi.Controllers
 {
@@ -12,9 +13,9 @@ namespace WebUi.Controllers
         {
             _teamService = teamService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page=1)
         {
-            var model = _teamService.GetAll();
+            var model = _teamService.GetAll().ToPagedList(page, 5); ;
             return View(model);
         }
         [HttpPost]

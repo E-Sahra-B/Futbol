@@ -19,9 +19,9 @@
                 <input type="text" class="form-control" id="exampleInputUsername2" name="LastName" placeholder="LastName">
             </div>
         </div>
-        <button type="submit" class="btn btn-outline-success" >Futbolcu Ekle</button>
+        <button type="submit" class="btn btn-outline-success">Futbolcu Ekle</button>
     </form>
-    
+
     <table class="table table-bordered">
         <tr>
             <th>Fulbolcu Id</th>
@@ -45,4 +45,4 @@
         }
     </table>
 </div>
-
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))

@@ -2,6 +2,7 @@
 using Entities.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using WebUi.Areas.Admin.Models;
+using X.PagedList;
 
 namespace WebUi.Controllers
 {
@@ -14,13 +15,14 @@ namespace WebUi.Controllers
             _matchService = matchService;
             _teamService = teamService;
         }
-        public IActionResult Index()
+        public IActionResult Index(int page = 1)
         {
             var model = new MatchAddViewModel
             {
                 Match = new Match(),
                 Teams = _teamService.GetAll()
             };
+           TempData= _matchService.GetAll.ToPagedList(page, 5);
             return View(model);
         }
         [HttpPost]
